@@ -12,48 +12,47 @@ import java.util.Scanner;
  */
 public class Ejercicios_Semana2_Lab1 {
     
-    // 1) Determinar si es par o impar
-    public static void parImpar(int n) {
-        if (n % 2 == 0) {
-            System.out.println(n + " es PAR");
+    // par o impar
+    public static void parImpar(int numero) {
+        if (numero % 2 == 0) {
+            System.out.println(numero + "par");
         } else {
-            System.out.println(n + " es IMPAR");
+            System.out.println(numero + "impar");
         }
     }
 
-    // 2) Valor absoluto
-    public static void valorAbsoluto(int n) {
-        int abs = (n < 0) ? -n : n;
-        System.out.println("El valor absoluto de " + n + " es " + abs);
+    // valor absoluto
+    public static void valorAbsoluto(int numero) {
+        int absoluto = (numero < 0) ? -numero : numero;
+        System.out.println("valor absoluto de " + numero + " es: " + absoluto);
     }
 
-    // 3) Serie 3,6,9,...,99 y suma
+    // serie de numeros
     public static void serieSumatoria() {
         int suma = 0;
         for (int i = 3; i <= 99; i += 3) {
             System.out.print(i + " ");
             suma += i;
         }
-        System.out.println("\nSuma total: " + suma);
+        System.out.println("\nsuma total: " + suma);
     }
 
-    // 4) Tres números en orden ascendente
+    // numeros en orden ascendente
     public static void tresNumerosAsc(int a, int b, int c) {
-        int[] nums = {a, b, c};
-        // Orden manual
-        for (int i = 0; i < nums.length - 1; i++) {
-            for (int j = 0; j < nums.length - 1 - i; j++) {
-                if (nums[j] > nums[j + 1]) {
-                    int temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
+        int[] numeros = {a, b, c};
+        for (int i = 0; i < numeros.length - 1; i++) {
+            for (int j = 0; j < numeros.length - 1 - i; j++) {
+                if (numeros[j] > numeros[j + 1]) {
+                    int temp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = temp;
                 }
             }
         }
-        System.out.println("Orden ascendente: " + nums[0] + " " + nums[1] + " " + nums[2]);
+        System.out.println("orden ascendente: " + numeros[0] + " " + numeros[1] + " " + numeros[2]);
     }
 
-    // 5) Operaciones según relación de dos números
+    // operacion
     public static void operarDosNumeros(int a, int b) {
         int resultado;
         if (a == b) {
@@ -63,25 +62,25 @@ public class Ejercicios_Semana2_Lab1 {
         } else {
             resultado = a + b;
         }
-        System.out.println("Resultado: " + resultado);
+        System.out.println("eesultado: " + resultado);
     }
 
-    // 6) Notas hasta -1, ver si hubo un 10
+    // verificar si hay 10
     public static void notas() {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         boolean hubo10 = false;
         int nota;
-        System.out.println("Ingrese notas (0 a 10), -1 para terminar:");
+        System.out.println("ingrese notas del 0 al 10, introduzca -1 para terminar...");
         do {
-            nota = sc.nextInt();
+            nota = scan.nextInt();
             if (nota == 10) {
                 hubo10 = true;
             }
         } while (nota != -1);
-        System.out.println(hubo10 ? "Sí hubo un 10." : "No hubo ningún 10.");
+        System.out.println(hubo10 ? "Si hubo un 10." : "No hubo ningún 10");
     }
 
-    // 7) Pulsaciones según sexo
+    // genero
     public static void pulsaciones(int edad, char sexo) {
         int pulsaciones;
         if (sexo == 'F' || sexo == 'f') {
@@ -89,10 +88,10 @@ public class Ejercicios_Semana2_Lab1 {
         } else {
             pulsaciones = (210 - edad) / 10;
         }
-        System.out.println("Pulsaciones por cada 10 seg: " + pulsaciones);
+        System.out.println("pulsaciones por cada 10 segundos: " + pulsaciones);
     }
 
-    // 8) Utilidad según antigüedad
+    // utilidad
     public static void utilidad(double salario, int anios) {
         double porcentaje;
         if (anios < 1) porcentaje = 0.05;
@@ -102,29 +101,29 @@ public class Ejercicios_Semana2_Lab1 {
         else porcentaje = 0.20;
         
         double utilidad = salario * porcentaje;
-        System.out.println("La utilidad anual es: " + utilidad);
+        System.out.println("utilidad anual es: " + utilidad);
     }
 
-    // 9) Número primo o no
-    public static void esPrimo(int n) {
-        if (n <= 1) {
-            System.out.println(n + " NO es primo");
+    // numeros primos o no
+    public static void esPrimo(int numero) {
+        if (numero <= 1) {
+            System.out.println(numero + " no es un numero primo ");
             return;
         }
         boolean primo = true;
-        for (int i = 2; i < n; i++) {
-            if (n % i == 0) {
+        for (int i = 2; i < numero; i++) {
+            if (numero % i == 0) {
                 primo = false;
                 break;
             }
         }
-        System.out.println(primo ? n + " es primo" : n + " NO es primo");
+        System.out.println(primo ? numero + " es primo" : numero + " no s primo");
     }
 
-    // 10) Descuento en computadoras
+    // computadoras
     public static void descuentoComputadoras(int cantidad) {
-        double precioUnit = 11000;
-        double total = cantidad * precioUnit;
+        double precioCadaUno = 11000;
+        double total = cantidad * precioCadaUno;
         double descuento;
 
         if (cantidad < 5) descuento = 0.10;
@@ -140,10 +139,10 @@ public class Ejercicios_Semana2_Lab1 {
         System.out.println("Total a pagar: " + totalPagar);
     }
 
-    // 11) Lista de primos hasta N
-    public static void listaPrimos(int N) {
-        System.out.println("Primos hasta " + N + ":");
-        for (int i = 2; i <= N; i++) {
+    // primos hasta N
+    public static void listaPrimos(int numero) {
+        System.out.println("Primos hasta " + numero + ":");
+        for (int i = 2; i <= numero; i++) {
             boolean primo = true;
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
@@ -158,10 +157,10 @@ public class Ejercicios_Semana2_Lab1 {
         System.out.println();
     }
 
-    // 12) Área de triángulo
+    // triangulo
     public static void areaTriangulo(double base, double altura) {
         double area = (base * altura) / 2;
-        System.out.println("Área del triángulo: " + area);
+        System.out.println("area: " + area);
     }
     
 }
