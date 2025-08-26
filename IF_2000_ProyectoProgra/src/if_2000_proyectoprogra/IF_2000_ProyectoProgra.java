@@ -4,6 +4,8 @@
  */
 package if_2000_proyectoprogra;
 
+import domain.Person;
+
 /**
  *
  * @author MSI
@@ -14,7 +16,7 @@ public class IF_2000_ProyectoProgra {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       //Person per = new Person("xd", "xd", "xd", 2);
     }
     
 }

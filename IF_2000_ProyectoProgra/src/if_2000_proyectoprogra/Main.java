@@ -4,6 +4,8 @@
  */
 package if_2000_proyectoprogra;
 
+import logic.Ejercicios_Semana2_PracticaEnClase;
+
 /**
  *
  * @author MSI
@@ -16,11 +18,24 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        String name = "messi";
-        
-        int age = 12;
-        
-        System.out.println("Hello world"+name+age);
+                Ejercicios_Semana2_PracticaEnClase ejer = new Ejercicios_Semana2_PracticaEnClase();
+                
+                // ejercicios en clase
+                
+                 //ejer.cuadrado();
+       //ejer.triangulo();
+       //ejer.trianguloOtro();
+       //int [] resultado = ejer.matrizDeRandomsDeMenorAMayor();
+       //System.out.println("Numeros ordenados de menor a mayor");
+       //for (int i = 0; i < resultado.length;i++){
+           // System.out.print(i+"\n");
+           
+          //int []resultado = ejer.generadorDeCienNumeros();
+          //System.out.println("Numeros generados");
+          //for (int num : resultado){
+          //System.out.print(num+"\n");
+           //}
+          //ejer.Tablero();
         
     }
     
