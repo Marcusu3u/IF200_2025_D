@@ -22,6 +22,9 @@ public class Main {
         Ejercicios_Semana2_Lab1 labo = new Ejercicios_Semana2_Lab1();
                 Ejercicios_Semana2_PracticaEnClase ejer = new Ejercicios_Semana2_PracticaEnClase();
                 
+                //Laboratorio
+                
+                /*
                 labo.parImpar(2);
                 labo.valorAbsoluto(2);
                 labo.serieSumatoria();
@@ -34,6 +37,7 @@ public class Main {
                 labo.descuentoComputadoras(1);
                 labo.listaPrimos(10);
                 labo.areaTriangulo(2,1);
+                */
                 
                 
                 // ejercicios en clase
